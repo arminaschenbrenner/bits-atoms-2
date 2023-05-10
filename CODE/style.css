@@ -16,5 +16,5 @@ h4 {
 #teas,
 #cards {
   display: inline-flex;
-  flex-grow: 1;
+  flex-grow: 0;
 }
