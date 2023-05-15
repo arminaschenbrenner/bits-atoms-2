@@ -24,14 +24,72 @@
  */
 
 .card {
-  background-color: blue;
-  color: #fff;
-  border-radius: 5px;
-  padding: 15px;
+  padding: 20px;
+  background-color: darkblue;
+  box-shadow: inset 0 0 100px 10px black;
 }
 
 .main-image {
-  width: 80%;
-  margin: 20px auto 0;
+  width: 260px;
+  height: 290px;
   display: block;
+  object-fit: cover;
+  border: solid;
+  border-color: magenta;
+  border-width: 3px;
+}
+
+.text {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+}
+
+h2 {
+  margin-top: 2px;
+  margin-bottom: 5px;
+  font-size: 13.9px;
+  font-weight: normal;
+  transform: scale(1, 2);
+}
+
+h1 {
+  margin-top: 38px;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 0.3px 0px magenta;
+  transform: scale(1, 5);
+}
+
+h3 {
+  margin-top: 59px;
+  font-size: 14.5px;
+  font-weight: normal;
+  transform: scale(1, 4);
+}
+
+.h4-wrapper {
+  display: flex;
+  width: 300px;
+  margin-left: -20px;
+  margin-top: 15px;
+  background-color: white;
+  box-shadow: inset -100px 0 50px -100px black, inset 100px 0 50px -100px black;
+}
+
+.h4-item {
+  flex-grow: 2;
+  padding: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9.5px;
+  font-weight: normal;
+  text-align: center;
+  color: magenta;
+  text-shadow: 1px 1px 0px black;
+}
+
+#item-1,
+#item-4 {
+  flex-grow: 1;
+  margin: 0px 5px;
 }
