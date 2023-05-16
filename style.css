@@ -37,6 +37,10 @@
   color: #fff;
 }
 
+.text:not(#h1) {
+  text-align: center;
+}
+
 .main-image {
   width: 260px;
   height: 290px;
@@ -50,12 +54,12 @@
 }
 
 #h2-wrapper {
-  height: 21px;
+  height: 23px;
 }
 
 #h2 {
   margin-top: 2px;
-  font-size: 13.95px;
+  font-size: 13.8px;
   font-weight: normal;
   transform: scale(1, 2);
 }
@@ -87,7 +91,6 @@
   display: flex;
   width: 300px;
   margin-left: -20px;
-  /* margin-top: 16px; */
   background-color: white;
   box-shadow: inset -100px 0 50px -100px black, inset 100px 0 50px -100px black;
 }
