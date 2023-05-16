@@ -24,17 +24,17 @@
  */
 
 .card {
-  display: flex;
   flex-direction: column;
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
   background-color: darkblue;
   box-shadow: inset 0 0 50px 10px black;
 }
 
-.main-image,
-.text,
-.h4-wrapper {
-  flex-grow: 1;
+.text {
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
 }
 
 .main-image {
@@ -42,45 +42,52 @@
   height: 290px;
   display: block;
   object-fit: cover;
-  border: solid;
-  border-color: magenta;
-  border-width: 3px;
+  border: 3px solid magenta;
 }
 
-.text {
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  color: #fff;
+.wrapper {
+  overflow: hidden;
 }
 
-h2 {
+#h2-wrapper {
+  height: 21px;
+}
+
+#h2 {
   margin-top: 2px;
-  margin-bottom: 7px;
-  font-size: 13.9px;
+  font-size: 13.95px;
   font-weight: normal;
   transform: scale(1, 2);
 }
 
-h1 {
-  margin-top: 40px;
-  font-size: 32px;
+#h1-wrapper {
+  height: 115px;
+}
+
+#h1 {
+  margin-top: 38px;
+  font-size: 31.6px;
   font-weight: bold;
   text-shadow: 2px 0.3px 0px magenta;
   transform: scale(1, 5);
 }
 
-h3 {
-  margin-top: 53px;
+#h3-wrapper {
+  height: 45px;
+}
+
+#h3 {
+  margin-top: 11px;
   font-size: 14.5px;
   font-weight: normal;
   transform: scale(1, 4);
 }
 
-.h4-wrapper {
+#h4-wrapper {
   display: flex;
   width: 300px;
   margin-left: -20px;
-  margin-top: 16px;
+  /* margin-top: 16px; */
   background-color: white;
   box-shadow: inset -100px 0 50px -100px black, inset 100px 0 50px -100px black;
 }
@@ -96,8 +103,12 @@ h3 {
   text-shadow: 1px 1px 0px black;
 }
 
-#item-1,
+#item-1 {
+  flex-grow: 1;
+  margin: 0px 4px;
+}
+
 #item-4 {
   flex-grow: 1;
-  margin: 0px 5px;
+  margin: 0px 6px;
 }
