@@ -23,7 +23,7 @@
             a lil' sketchy...
           </div>
           <div id="text">
-            This is a simple drawing app made with the help of the p5.js
+            This is a simple sketching app made with the help of the p5.js
             library.
           </div>
         </div>
@@ -35,6 +35,22 @@
           <div class="button" id="erase" onclick="erasing();">erase</div>
           <div class="button" id="reset" onclick="reseting();">reset</div>
         </div>
+        <div class="options" id="papers">
+          <div class="paper" id="paper1" onclick="paperChange1();"></div>
+          <div class="paper" id="paper2" onclick="paperChange2();"></div>
+          <div class="paper" id="paper3" onclick="paperChange3();"></div>
+        </div>
+        <div class="options" id="sizes">
+          <div class="size" id="size1" onclick="sizeChange1();">
+            <div class="sizes" id="circle1"></div>
+          </div>
+          <div class="size" id="size2" onclick="sizeChange2();">
+            <div class="sizes" id="circle2"></div>
+          </div>
+          <div class="size" id="size3" onclick="sizeChange3();">
+            <div class="sizes" id="circle3"></div>
+          </div>
+        </div>
         <div class="options" id="colors">
           <div class="color" id="color1" onclick="colorChange1();"></div>
           <div class="color" id="color2" onclick="colorChange2();"></div>
@@ -42,25 +58,10 @@
           <div class="color" id="color4" onclick="colorChange4();"></div>
           <div class="color" id="color5" onclick="colorChange5();"></div>
         </div>
-        <div class="options" id="papers">
-          <div class="paper" id="paper1" onclick="paperChange1();"></div>
-          <div class="paper" id="paper2" onclick="paperChange2();"></div>
-          <div class="paper" id="paper3" onclick="paperChange3();"></div>
-        </div>
-        <div class="options" id="pens">
-          <div class="pen" id="pen1" onclick="penChange1();">
-            <div class="sizes" id="size1"></div>
-          </div>
-          <div class="pen" id="pen2" onclick="penChange2();">
-            <div class="sizes" id="size2"></div>
-          </div>
-          <div class="pen" id="pen3" onclick="penChange3();">
-            <div class="sizes" id="size3"></div>
-          </div>
-        </div>
+
         <div class="menu" id="footer">
           <div class="button" id="paper" onclick="paperMenu();">paper</div>
-          <div class="button" id="pen" onclick="penMenu();">pen</div>
+          <div class="button" id="size" onclick="sizeMenu();">size</div>
           <div class="button" id="color" onclick="colorMenu();">color</div>
         </div>
       </div>

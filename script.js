@@ -1,8 +1,3 @@
-let circleX = [];
-let circleY = [];
-let circleR = [];
-let circleC = [];
-
 let startToggle = 0;
 
 let paperToggle = 0;
@@ -11,11 +6,11 @@ let paperColor2 = [255, 255, 255];
 let paperColor3 = [213, 181, 156];
 let paperColor = paperColor3;
 
-let penToggle = 0;
-let penRadius1 = 5;
-let penRadius2 = 15;
-let penRadius3 = 25;
-let penRadius = penRadius2;
+let sizeToggle = 0;
+let penSize1 = 5;
+let penSize2 = 15;
+let penSize3 = 25;
+let penSize = penSize2;
 
 let colorToggle = 0;
 let penColor1 = [0, 0, 0];
@@ -38,15 +33,11 @@ function draw() {
   if (
     mouseIsPressed === true &&
     paperToggle == 0 &&
-    penToggle == 0 &&
+    sizeToggle == 0 &&
     colorToggle == 0 &&
     startToggle == 1
   ) {
-    circle(mouseX, mouseY, penRadius);
-    circleX.push(mouseX);
-    circleY.push(mouseY);
-    circleR.push(penRadius);
-    circleC.push(penColor);
+    circle(mouseX, mouseY, penSize);
   }
 }
 
@@ -75,8 +66,8 @@ function paperMenuOn() {
   if (startToggle == 1) {
     document.getElementById("papers").style.display = "flex";
     paperToggle = 1;
-    document.getElementById("pens").style.display = "none";
-    penToggle = 0;
+    document.getElementById("sizes").style.display = "none";
+    sizeToggle = 0;
     document.getElementById("colors").style.display = "none";
     colorToggle = 0;
   }
@@ -95,10 +86,10 @@ function paperMenu() {
   }
 }
 
-function penMenuOn() {
+function sizeMenuOn() {
   if (startToggle == 1) {
-    document.getElementById("pens").style.display = "flex";
-    penToggle = 1;
+    document.getElementById("sizes").style.display = "flex";
+    sizeToggle = 1;
     document.getElementById("papers").style.display = "none";
     paperToggle = 0;
     document.getElementById("colors").style.display = "none";
@@ -106,16 +97,16 @@ function penMenuOn() {
   }
 }
 
-function penMenuOff() {
-  document.getElementById("pens").style.display = "none";
-  penToggle = 0;
+function sizeMenuOff() {
+  document.getElementById("sizes").style.display = "none";
+  sizeToggle = 0;
 }
 
-function penMenu() {
-  if (penToggle == 0) {
-    penMenuOn();
-  } else if (penToggle == 1) {
-    penMenuOff();
+function sizeMenu() {
+  if (sizeToggle == 0) {
+    sizeMenuOn();
+  } else if (sizeToggle == 1) {
+    sizeMenuOff();
   }
 }
 
@@ -123,8 +114,8 @@ function colorMenuOn() {
   if (startToggle == 1) {
     document.getElementById("colors").style.display = "flex";
     colorToggle = 1;
-    document.getElementById("pens").style.display = "none";
-    penToggle = 0;
+    document.getElementById("sizes").style.display = "none";
+    sizeToggle = 0;
     document.getElementById("papers").style.display = "none";
     paperToggle = 0;
   }
@@ -161,19 +152,19 @@ function paperChange3() {
   paperMenuOff();
 }
 
-function penChange1() {
-  penRadius = penRadius1;
-  penMenuOff();
+function sizeChange1() {
+  penSize = penSize1;
+  sizeMenuOff();
 }
 
-function penChange2() {
-  penRadius = penRadius2;
-  penMenuOff();
+function sizeChange2() {
+  penSize = penSize2;
+  sizeMenuOff();
 }
 
-function penChange3() {
-  penRadius = penRadius3;
-  penMenuOff();
+function sizeChange3() {
+  penSize = penSize3;
+  sizeMenuOff();
 }
 
 function colorChange1() {
