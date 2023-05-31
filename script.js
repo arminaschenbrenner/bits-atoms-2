@@ -65,9 +65,8 @@ function starting() {
   startToggle = true;
 }
 
-// Reset button
-function reseting() {
-  background(paperColor);
+// Draw button
+function drawing() {
   newPenColor = penColor;
   fill(newPenColor);
 }
@@ -78,10 +77,16 @@ function erasing() {
   fill(newPenColor);
 }
 
-// Draw button
-function drawing() {
+// Reset button
+function reseting() {
+  background(paperColor);
   newPenColor = penColor;
   fill(newPenColor);
+}
+
+// Save button
+function saving() {
+  saveCanvas("LilSketchy", "jpg");
 }
 
 // Open and close menus based on state
